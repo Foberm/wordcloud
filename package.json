@@ -1,0 +1,23 @@
+{
+  "name": "wordcloud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Foberm/wordcloud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Foberm/wordcloud/issues"
+  },
+  "homepage": "https://github.com/Foberm/wordcloud#readme",
+  "dependencies": {
+    "d3": "^4.11.0",
+    "d3-dispatch": "^1.0.3"
+  }
+}
