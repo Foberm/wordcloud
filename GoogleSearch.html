@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Google search</title>
+    <title>Google UI</title>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/typeit/4.4.1/typeit.min.js'></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -44,22 +44,26 @@
       }
 
       .btn-google {
-              flex: 0.3;
-              padding: 0.5rem 1rem 0.5rem 1rem;
-              font-size: 1rem;
-              background-image: -webkit-linear-gradient(#f5f5f5, #f1f1f1);
-              background-image: -o-linear-gradient(#f5f5f5, #f1f1f1);
-              background-image: linear-gradient(#f5f5f5, #f1f1f1);
-              color: grey;
-              border: 1px solid #f8f8f8;
-              border-radius: 2px;
-              font-weight: bold;
-              font-family: arial,sans-serif;
-            }
+        flex: 0.3;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        font-size: 1rem;
+        background-image: -webkit-linear-gradient(#f5f5f5, #f1f1f1);
+        background-image: -o-linear-gradient(#f5f5f5, #f1f1f1);
+        background-image: linear-gradient(#f5f5f5, #f1f1f1);
+        color: grey;
+        border: 1px solid #f8f8f8;
+        border-radius: 2px;
+        font-weight: bold;
+        font-family: arial,sans-serif;
+      }
 
       .btn-google:hover {
         border: 1px solid #c6c6c6;
         color: #222;
+      }
+
+      .marked {
+        background-color: #d4e3fc;
       }
 
 
@@ -69,10 +73,10 @@
 
     <div class="ui">
       <img src='images/google.png' id='googleLogo' alt='Google Logo' />
-      <p class='searchbox'></p>
+      <p class='searchbox'><span id='query'></span></p>
       <div class="googleButtons">
-        <button id='search' class='btn-google'>Google Search</button>
-        <button id='lucky' class='btn-google'>I'm Feeling Lucky</button>
+        <button id='search' disabled onClick='window.location.href="./obeShitApproach/index.html"' class='btn-google'>Google Search</button>
+        <button id='lucky' disabled onClick='easteregg()' class='btn-google'>I'm Feeling Lucky</button>
       </div>
 
 
@@ -87,7 +91,7 @@
       let pauseDel = 700
       let pauseWrite = 200
 
-      $('.searchbox').typeIt({
+      $('#query').typeIt({
         speed: 80,
         lifeLike: true,
         autoStart: true,
@@ -101,7 +105,7 @@
       .tiPause(pauseDel)
       .tiDelete(6)
       .tiPause(pauseWrite)
-      .tiType('C##')
+      .tiType('C++')
       .tiPause(pauseDel)
       .tiDelete(3)
       .tiPause(pauseWrite)
@@ -117,7 +121,22 @@
       .tiType('googled the most!')
 
       function finishedTyping(){
+        $('#search').prop("disabled", false);
+        $('#lucky').prop("disabled", false);
+      }
 
+      function easteregg() {
+        $('#query').addClass('marked')
+        setTimeout(function(){
+            $('#query').removeClass('marked')
+            $('#query').typeIt({
+              speed: 60,
+              lifeLike: true,
+              autoStart: true,
+              startDelete: true
+            })
+            .tiType('Oh really?')
+        }, 300)
       }
 
     </script>
