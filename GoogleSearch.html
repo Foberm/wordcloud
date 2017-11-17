@@ -88,6 +88,23 @@
 
     <script>
 
+      const egg_strings = [
+        'Oh really? Go to the casino then..',
+        'Good for you!',
+        'Maybe you should play the lottery..',
+        'Luck is great, but most of life is hard work.',
+        'The answer is 42.',
+        'Nice!',
+        "console.log( 'i am feeling lucky' );",
+        "cout << 'i am feeling lucky'",
+        'Error 404: Luck not found',
+        '01101100 01110101 01100011 01101011',
+        "life.push( 'Luck' )",
+        'if ( luck === null ) { getLucky( ); }'
+
+
+      ]
+
       let pauseDel = 700
       let pauseWrite = 200
 
@@ -126,16 +143,19 @@
       }
 
       function easteregg() {
+        let rand = Math.floor(Math.random() * egg_strings.length)
+        let sentence = egg_strings[rand]
+        console.log(sentence)
         $('#query').addClass('marked')
         setTimeout(function(){
             $('#query').removeClass('marked')
             $('#query').typeIt({
-              speed: 60,
+              speed: 40,
               lifeLike: true,
               autoStart: true,
               startDelete: true
             })
-            .tiType('Oh really?')
+            .tiType(sentence)
         }, 300)
       }
 
