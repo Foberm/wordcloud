@@ -22,20 +22,20 @@ body {
 </div>
 <script src="data.js">
 </script>
-<script> function update(pos){
-  let cont = json.data[pos][Object.keys(json.data[pos])[0]]
-let ina="";
-for(let i=0;i<cont.length;i++){
+<script>
+function update(pos){
+    let cont = json.data[pos][Object.keys(json.data[pos])[0]]
+    let ina=""
 
-    let str = Object.keys(cont[i])[0]
-    let nr = parseInt(cont[i][Object.keys(cont[i])[0]])
-    for(let ii=0;ii<nr;ii++){
-      ina+=str+" "
+    for(let i = 0; i < cont.length; i++){
+        let str = Object.keys(cont[i])[0]
+        let nr = parseInt(cont[i][Object.keys(cont[i])[0]])
+        for(let j = 0; j < nr; j++){
+          ina += str + " "
+        }
     }
-}
 
-document.getElementById("text").innerHTML = ina
-
+    document.getElementById("text").innerHTML = ina
 }
 update(0)
 let nr=1;
