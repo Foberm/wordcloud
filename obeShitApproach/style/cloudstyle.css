@@ -7,6 +7,33 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+text {
+  cursor: pointer;
+}
+
+/* code {
+  padding: 2px 4px;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+} */
+
+#year {
+  font-size: 3rem;
+  color: #c7254e;
+  flex: 1;
+  text-align: center;
+}
+
+#slider {
+  width: 500px;
+}
+
+.ui-widget-content {
+  background-color:rgba(255, 255, 255, 0.2);
+}
+
 .content {
   flex: 1;
   display: flex;
@@ -21,6 +48,15 @@ body {
 
 .timeline {
   flex: 0.2;
+  padding: 2rem 10rem 2rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#range_wrapper {
+  margin-top: 4rem;
+  flex: 1;
 }
 
 #vis {
