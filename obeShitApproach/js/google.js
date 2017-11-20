@@ -18,33 +18,32 @@ let pauseDel = 700
 let pauseWrite = 200
 
 $('#query').typeIt({
-  speed: 80,
-  lifeLike: true,
-  autoStart: true,
-  callback: finishedTyping
-  })
-  .tiType('JavaScript')
-  .tiPause(pauseDel)
-  .tiDelete(10)
-  .tiPause(pauseWrite)
-  .tiType('Python')
-  .tiPause(pauseDel)
-  .tiDelete(6)
-  .tiPause(pauseWrite)
-  .tiType('C++')
-  .tiPause(pauseDel)
-  .tiDelete(3)
-  .tiPause(pauseWrite)
-  .tiType('Java')
-  .tiPause(pauseDel)
-  .tiDelete(4)
-  .tiPause(pauseWrite)
-  .tiSettings({speed: 60})
-  .tiType('Find out which programming language was bing-ed th')
-  .tiPause(300)
-  .tiDelete(10)
-  .tiPause(100)
-  .tiType('googled the most!')
+    speed: 80,
+    lifeLike: true,
+    autoStart: true,
+    callback: finishedTyping
+  }).tiType('JavaScript')
+    .tiPause(pauseDel)
+    .tiDelete(10)
+    .tiPause(pauseWrite)
+    .tiType('Python')
+    .tiPause(pauseDel)
+    .tiDelete(6)
+    .tiPause(pauseWrite)
+    .tiType('C++')
+    .tiPause(pauseDel)
+    .tiDelete(3)
+    .tiPause(pauseWrite)
+    .tiType('Java')
+    .tiPause(pauseDel)
+    .tiDelete(4)
+    .tiPause(pauseWrite)
+    .tiSettings({speed: 60})
+    .tiType('Find out which programming language was bing-ed th')
+    .tiPause(300)
+    .tiDelete(10)
+    .tiPause(100)
+    .tiType('googled the most!')
 
 function finishedTyping(){
   $('#search').prop("disabled", false);

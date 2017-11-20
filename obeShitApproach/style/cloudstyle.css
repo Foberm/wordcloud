@@ -1,0 +1,55 @@
+body {
+  display: flex;
+  height: 96vh;
+  width: 96vw;
+  margin: 10px auto;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.cloud {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline {
+  flex: 0.2;
+}
+
+#vis {
+  flex: 0.8;
+}
+
+.desc {
+  flex: 0.25;
+  border-left: 1px solid #c3c3c3;
+  padding: 2rem;
+  text-align: justify;
+  font-size: 1.5rem;
+}
+
+#desc_title {
+  font-size: 3rem;
+}
+
+#results {
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+#num_percent {
+  font-size: 5rem;
+  color: #c7254e;
+}
+
+#num_percent:hover {
+
+}
