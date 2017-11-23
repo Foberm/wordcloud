@@ -1,5 +1,6 @@
 function update(pos){
     let cont = json.data[pos][Object.keys(json.data[pos])[0]]
+        console.log('update', pos, cont)
     let ina=""
 
     for(let i = 0; i < cont.length; i++){

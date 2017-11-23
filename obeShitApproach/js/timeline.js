@@ -54,9 +54,9 @@ startAnimation()
 function startAnimation() {
     anim = setInterval(function() {
       $rangeInput.val(animation_progress).trigger('input');
-      update(animation_progress)
+      update(animation_progress-1)
       animation_progress = (animation_progress < 13) ? animation_progress+1 : 1
-    }, 1000)
+    }, 5000)
 }
 
 $('svg').on('mouseover', function() {
