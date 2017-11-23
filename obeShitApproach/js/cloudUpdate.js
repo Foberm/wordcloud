@@ -10,8 +10,6 @@ function update(pos){
           ina += str + " "
         }
     }
-
-    document.getElementById("text").innerHTML = ina
     parseText(ina)
 }
 update(0)
