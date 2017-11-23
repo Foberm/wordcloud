@@ -1,3 +1,7 @@
+let animation_progress = 2
+let anim = null
+
+
 var sheet = document.createElement('style'),
   $rangeInput = $('.range input'),
   prefs = ['webkit-slider-runnable-track', 'moz-range-track', 'ms-track'];
@@ -10,6 +14,9 @@ var getTrackStyle = function (el) {
       style = '';
   let y = parseInt(el.value) + 2003
   $('#year').html(y)
+
+  animation_progress = parseInt(curVal)
+
 
   // Set active label
   $('.range-labels li').removeClass('active selected');
@@ -33,7 +40,7 @@ $rangeInput.on('input', function () {
   sheet.textContent = getTrackStyle(this);
 });
 
-let animation_progress = 2
+
 
 // Change input value on label click
 $('.range-labels li').on('click', function () {
@@ -42,7 +49,20 @@ $('.range-labels li').on('click', function () {
   animation_progress = index+1
 });
 
-setInterval(function() {
-  $rangeInput.val(animation_progress).trigger('input');
-  animation_progress = (animation_progress < 13) ? animation_progress+1 : 1
-}, 5000)
+startAnimation()
+
+function startAnimation() {
+    anim = setInterval(function() {
+      $rangeInput.val(animation_progress).trigger('input');
+      update(animation_progress)
+      animation_progress = (animation_progress < 13) ? animation_progress+1 : 1
+    }, 1000)
+}
+
+$('svg').on('mouseover', function() {
+    clearInterval(anim)
+})
+
+$('svg').on('mouseout', function() {
+    startAnimation()
+})
