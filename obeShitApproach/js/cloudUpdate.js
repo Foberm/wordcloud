@@ -12,6 +12,7 @@ function update(pos){
     }
 
     document.getElementById("text").innerHTML = ina
+    parseText(ina)
 }
 update(0)
 // let nr=1;
