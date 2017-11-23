@@ -14,7 +14,7 @@
   <body>
     <div class="content">
       <div class="cloud">
-          <div class="timeline" data-intro="The Timeline represents the year of Google search results!">
+          <div class="timeline" data-intro="The Timeline represents the year of the Google search results!">
             <div id="range_wrapper">
                 <div class="range">
                   <input type="range" min="1" max="13" steps="1" value="1">
@@ -38,13 +38,13 @@
             </div>
             <span id="year">2004</span>
           </div>
-          <div id="vis" data-intro="See which programming languages have been googled the most. The bigger the word is, the more popular it was at this time." data-position='right'></div>
+          <div id="vis" data-intro="See which programming languages have been googled the most. The bigger the word is, the more popular it was at this time. Click a language to receive more information about it." data-position='right'></div>
       </div>
       <div class="desc" data-intro="Learn more about the programming language itself and how many times it was googled.">
-          <code id="desc_title">JavaScript</code>
+          <code id="desc_title">Click Language</code>
           <p id="results">
-              <span id="num_percent">81</span>%<br>
-              ~ <span id="num_total">5.000.000</span> Searches
+              <span id="num_percent">0</span>%<br>
+              ~ <span id="num_total">0</span> Searches
           </p>
           <p id="lang_desc">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -64,10 +64,14 @@
 <script src="./intro/intro.min.js"></script>
 <script src="./js/timeline.js"></script>
 <script type="text/javascript">
-  // introJs()
-  // .setOption('showStepNumbers', false)
-  // .setOption('showBullets', false)
-  // .setOption('hideNext', true)
-  // .setOption('hidePrev', true)
-  // .start()
+  introJs()
+  .setOption('showStepNumbers', false)
+  .setOption('showBullets', false)
+  .setOption('hideNext', true)
+  .setOption('hidePrev', true)
+  .onexit(function() {
+      intro = false
+      startAnimation()
+  })
+  .start()
 </script>

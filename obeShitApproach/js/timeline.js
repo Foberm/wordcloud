@@ -1,5 +1,6 @@
-let animation_progress = 2
+let animation_progress = 1
 let anim = null
+let intro = true
 
 
 var sheet = document.createElement('style'),
@@ -16,6 +17,7 @@ var getTrackStyle = function (el) {
   $('#year').html(y)
 
   animation_progress = parseInt(curVal)
+  update(animation_progress-1)
 
 
   // Set active label
@@ -49,20 +51,20 @@ $('.range-labels li').on('click', function () {
   animation_progress = index+1
 });
 
-startAnimation()
 
 function startAnimation() {
     anim = setInterval(function() {
       $rangeInput.val(animation_progress).trigger('input');
-      update(animation_progress-1)
       animation_progress = (animation_progress < 13) ? animation_progress+1 : 1
     }, 3000)
 }
 
 $('text').on('mouseover', function() {
-    clearInterval(anim)
+    if(!intro)
+      clearInterval(anim)
 })
 
 $('text').on('mouseout', function() {
-    startAnimation()
+    if(!intro)
+      startAnimation()
 })
