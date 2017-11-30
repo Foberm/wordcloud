@@ -19,6 +19,12 @@ text {
   font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 } */
 
+svg {
+  border: 1px solid #c3c3c3;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
 #year {
   font-size: 3rem;
   color: #c7254e;
@@ -28,6 +34,28 @@ text {
 
 #slider {
   width: 500px;
+}
+
+#lbl_container {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.lbl {
+  padding: 5px 15px 5px 15px;
+  color: white;
+  border-radius: 20px;
+}
+
+#lbl_back {
+  background-color: #4B77BE;
+  margin-right: 0.5rem;
+  display: inline;
+}
+
+#lbl_front {
+  background-color: #FFB61E;
+  display: inline;
 }
 
 .ui-widget-content {
@@ -47,8 +75,8 @@ text {
 }
 
 .timeline {
-  flex: 0.2;
-  padding: 2rem 10rem 2rem 10rem;
+  flex: 0.1;
+  padding: 2rem 10rem 2rem 15rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,7 +88,10 @@ text {
 }
 
 #vis {
-  flex: 0.8;
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
 }
 
 .desc {
@@ -78,7 +109,6 @@ text {
 #results {
   padding: 1.5rem;
   font-size: 2.5rem;
-  margin-bottom: 3rem;
 }
 
 #num_percent {
