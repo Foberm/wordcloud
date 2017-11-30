@@ -15,7 +15,6 @@ update(0)
 
 function updateUI(d) {
   let percent = 0
-  console.log(animation_progress-1)
   let currentValues = json.data[animation_progress-1][Object.keys(json.data[animation_progress-1])[0]]
   for(let i = 0; i < currentValues.length; i++){
       let str = Object.keys(currentValues[i])[0]
@@ -25,6 +24,19 @@ function updateUI(d) {
   $("#desc_title").html(d.text)
   $("#num_percent").html(percent)
   $("#num_total").html(numberWithCommas((5000000*percent/100)))
+
+  $('#lbl_back, #lbl_front').css("display","none")
+
+  for(let i = 0; i < lang.length; i++){
+      if(lang[i][0].toUpperCase() == d.text.toUpperCase()){
+        switch(lang[i][2]){
+          case 'B': $('#lbl_back').css('display', 'inline'); break;
+          case 'F': $('#lbl_front').css('display', 'inline'); break;
+          case 'B/F': $('#lbl_back, #lbl_front').css('display', 'inline'); break;
+        }
+        // $('#lang_desc').html(lang[i][1])
+      }
+  }
 }
 
 function numberWithCommas(x) {

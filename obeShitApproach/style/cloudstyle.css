@@ -36,6 +36,28 @@ svg {
   width: 500px;
 }
 
+#lbl_container {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.lbl {
+  padding: 5px 15px 5px 15px;
+  color: white;
+  border-radius: 20px;
+}
+
+#lbl_back {
+  background-color: #4B77BE;
+  margin-right: 0.5rem;
+  display: inline;
+}
+
+#lbl_front {
+  background-color: #FFB61E;
+  display: inline;
+}
+
 .ui-widget-content {
   background-color:rgba(255, 255, 255, 0.2);
 }
@@ -87,7 +109,6 @@ svg {
 #results {
   padding: 1.5rem;
   font-size: 2.5rem;
-  margin-bottom: 3rem;
 }
 
 #num_percent {
