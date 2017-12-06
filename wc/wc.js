@@ -3,7 +3,6 @@ const fs = require('fs');
 let k=0;
 values=['Java', 'Javascript', 'C', 'go', 'php', 'react', 'abc', 'def', 'acf', 'ads', 'Windows']//max len = 5
 function abc(value){
-  console.log(value)
 googleTrends.interestOverTime({keyword: value, category:5,  endTime: new Date('2016-12-31')})
 .then(function(results){
     const a =JSON.parse(results).default.timelineData
