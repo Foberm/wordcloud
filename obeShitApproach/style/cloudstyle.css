@@ -47,15 +47,28 @@ svg {
   border-radius: 20px;
 }
 
-#lbl_back {
+#lbl_actor {
   background-color: #4B77BE;
   margin-right: 0.5rem;
   display: inline;
 }
 
-#lbl_front {
-  background-color: #FFB61E;
+#lbl_politics {
+  background-color: #26A65B;
+  margin-right: 0.5rem;
   display: inline;
+}
+
+#lbl_musician {
+  background-color: #FFB61E;
+  margin-right: 0.5rem;
+  display: inline;
+}
+
+#lbl_idiot {
+  background-color: #EF472F;
+  display: none;
+  margin-right: 0.5rem;
 }
 
 .ui-widget-content {

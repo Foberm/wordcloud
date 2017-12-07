@@ -18,28 +18,28 @@ let pauseDel = 700
 let pauseWrite = 200
 
 $('#query').typeIt({
-    speed: 80,
+    speed: 60,
     lifeLike: true,
     autoStart: true,
     callback: finishedTyping
-  }).tiType('JavaScript')
+  }).tiType('George Clooney')
     .tiPause(pauseDel)
-    .tiDelete(10)
+    .tiDelete(14)
     .tiPause(pauseWrite)
-    .tiType('Python')
+    .tiType('Angelina Jolie')
     .tiPause(pauseDel)
-    .tiDelete(6)
+    .tiDelete(14)
     .tiPause(pauseWrite)
-    .tiType('C++')
+    .tiType('Barack Obama')
     .tiPause(pauseDel)
-    .tiDelete(3)
+    .tiDelete(12)
     .tiPause(pauseWrite)
-    .tiType('Java')
+    .tiType('Michael Jackson')
     .tiPause(pauseDel)
-    .tiDelete(4)
+    .tiDelete(15)
     .tiPause(pauseWrite)
-    .tiSettings({speed: 60})
-    .tiType('Find out which programming language was bing-ed th')
+    .tiSettings({speed: 50})
+    .tiType('Find out which Celebrities were bing-ed th')
     .tiPause(300)
     .tiDelete(10)
     .tiPause(100)

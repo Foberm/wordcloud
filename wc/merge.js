@@ -1,5 +1,5 @@
 const fs = require('fs');
-let k= 3;
+let k= 8;
 let data=[]
 for(let i=1;i<=k;i++){
   let temp = require('./data'+i+".js");
@@ -7,7 +7,7 @@ for(let i=1;i<=k;i++){
 }
 let factor=[]
 for(let i=0;i<data.length;i++){
-    factor.push(data[i].data[0][" 2004"][0].Java/data[0].data[0][" 2004"][0].Java)
+    factor.push(data[i].data[0][" 2004"][0]["Michael Jackson"]/data[0].data[0][" 2004"][0]["Michael Jackson"])
 }
 let ret=data[0].data
     for(let ii=0;ii<data[0].data.length;ii++){
@@ -24,7 +24,8 @@ let ret=data[0].data
     }
     for(let i=0;i<ret[ii][year].length;i++){
      ret[ii][year][i][Object.keys(ret[ii][year][i])[0]]/=year_sum/100
-     if(ret[ii][year][i][Object.keys(ret[ii][year][i])[0]]<=1)ret[ii][year][i][Object.keys(ret[ii][year][i])[0]]=1
+
+     if(ret[ii][year][i][Object.keys(ret[ii][year][i])[0]]<=1 && ret[ii][year][i][Object.keys(ret[ii][year][i])[0]]!=0)ret[ii][year][i][Object.keys(ret[ii][year][i])[0]]=1
     }
 }
 str='json={"data":['
