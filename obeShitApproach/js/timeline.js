@@ -50,18 +50,9 @@ $('.range-labels li').on('click', function () {
 
 
 function startAnimation() {
+    $('#anim_status').html('<span class="glyphicon glyphicon-play"></span>')
     anim = setInterval(function() {
       $rangeInput.val(animation_progress).trigger('input');
       animation_progress = (animation_progress < 13) ? animation_progress+1 : 1
     }, 5000)
 }
-
-$('text').on('mouseover', function() {
-    if(!intro)
-      clearInterval(anim)
-})
-
-$('text').on('mouseout', function() {
-    if(!intro)
-      startAnimation()
-})

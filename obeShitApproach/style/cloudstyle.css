@@ -119,9 +119,17 @@ svg {
   font-size: 3rem;
 }
 
+#anim_status {
+  color: #c7254e;
+}
+
 #results {
   padding: 1.5rem;
   font-size: 2.5rem;
+}
+
+#age_display {
+  margin-top: 2rem;
 }
 
 #num_percent {

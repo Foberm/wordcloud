@@ -37,16 +37,18 @@
                 </ul>
             </div>
             <span id="year">2004</span>
+            <span id='anim_status' data-intro='Indicator, if the automatic timeline-progress is running. Hover over a name to stop the time progress!'><span class='glyphicon glyphicon-pause'></span></span>
           </div>
-          <div id="vis" data-intro="See which programming languages have been googled the most. The bigger the word is, the more popular it was at this time. Click a language to receive more information about it." data-position='right'></div>
+          <div id="vis" data-intro="See which celebrities have been googled the most. The bigger the word is, the more popular he/she was at this time. Click a name to receive more information about the person." data-position='right'></div>
       </div>
-      <div class="desc" data-intro="Learn more about the programming language itself and how many times it was googled.">
-          <code id="desc_title">Click Language</code>
+      <div class="desc" data-intro="See a few facts and how many times this celebrity was googled.">
+          <code id="desc_title">Click Celebrity</code>
           <p id="results">
               <span id="num_percent">0</span>%<br>
-              ~ <span id="num_total">0</span> Searches
+              ~ <span id="num_total">0</span> Mio. Searches
           </p>
           <div id='lbl_container'><span class='lbl' id='lbl_actor'>Actor</span><span class='lbl' id='lbl_politics'>Politician</span><span class='lbl' id='lbl_musician'>Musician</span><span class='lbl' id='lbl_idiot'>Idiot</span></div>
+          <p id="age_display">Age: <span id="num_age">0</span></p>
           <p id="lang_desc">
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
           </p>
@@ -57,14 +59,14 @@
 
   </body>
 </html>
-
+<script src="./js/timeline.js"></script>
 <script src="d3.min.js"></script>
 <script src="cloud.min.js"></script>
 <script src="data.js"></script>
 <script src="lang.js"></script>
-<script src="./js/cloudUpdate.js"></script>
 <script src="./intro/intro.min.js"></script>
-<script src="./js/timeline.js"></script>
+
+<script src="./js/cloudUpdate.js"></script>
 <script type="text/javascript">
   introJs()
   .setOption('showStepNumbers', false)

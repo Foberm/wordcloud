@@ -1,5 +1,5 @@
 let lang = [
-  ['Michael Jackson', 'M', 'verstorben'],
+  ['Michael Jackson', 'M', 'dead'],
   ['Justin Bieber', 'M/I', '23'],
   ['George Clooney', 'S', '56'],
   ['Dwayne Johnson', 'S', '45'],
