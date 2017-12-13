@@ -47,6 +47,7 @@ function updateUI(d) {
               case 'M/I': $('#lbl_musician, #lbl_idiot').css('display', 'inline'); break;
             }
             $("#num_age").html(lang[i][2])
+            $("#lang_desc").html(lang[i][3].substring(0, 980)+"...")
           }
       }
  }
