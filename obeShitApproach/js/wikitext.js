@@ -6,7 +6,6 @@ function httpGetAsync(theUrl, counter)
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
             if(JSON.parse(xmlHttp.responseText)["query"]["pages"][Object.keys(JSON.parse(xmlHttp.responseText)["query"]["pages"])[0]]["extract"]){
               lang[counter].push(JSON.parse(xmlHttp.responseText)["query"]["pages"][Object.keys(JSON.parse(xmlHttp.responseText)["query"]["pages"])[0]]["extract"]);
-              console.log(lang[counter][3])
     }}
     xmlHttp.open("GET", theUrl, true); // true for asynchronous
     xmlHttp.send(null);
