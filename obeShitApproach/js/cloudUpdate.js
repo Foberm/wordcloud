@@ -20,7 +20,6 @@ function updateUI(d) {
       b=d
       let percent = 0
       let currentValues = json.data[animation_progress-1][Object.keys(json.data[animation_progress-1])[0]]
-      console.log(currentValues)
       for(let i = 0; i < currentValues.length; i++){
           let str = Object.keys(currentValues[i])[0].replace('-', '')
           if(str ==  d.text){
@@ -47,6 +46,7 @@ function updateUI(d) {
               case 'M/I': $('#lbl_musician, #lbl_idiot').css('display', 'inline'); break;
             }
             $("#num_age").html(lang[i][2])
+            $("#lang_desc").html(lang[i][3])
           }
       }
  }
